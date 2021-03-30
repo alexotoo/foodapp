@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap");
+
+$logotextfm: "Chango", cursive;
+$bodyfontfm: "Oswald", sans-serif;
+
+body {
+  font-family: $bodyfontfm;
+  font-weight: 400;
+}
+.logo {
+  font-family: $logotextfm;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.outlineoff:active {
+  outline: none !important;
+}
+.container {
+  min-height: 90vh;
+}
