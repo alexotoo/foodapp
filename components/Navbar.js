@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import LoginLogoutLinks from "./LoginLogoutLinks";
 import NavDrawer from "./NavDrawer";
+import { GiGreenhouse } from "react-icons/gi";
 
 export default function Navbar() {
   return (
@@ -21,6 +22,7 @@ export default function Navbar() {
       px="2rem"
       boxShadow="base"
       position="fixed"
+      zIndex="999"
     >
       <HStack>
         <Center>
@@ -56,18 +58,33 @@ export default function Navbar() {
           <Text color="gray.400" fontWeight="bolder">
             Follow
           </Text>
-          <Circle size="30px" color="white" bg="green.500">
+          <Circle
+            size="30px"
+            color="white"
+            bg="green.500"
+            _hover={{ bg: "green.600" }}
+          >
             <a href="#">
               {" "}
               <FaFacebook />
             </a>
           </Circle>
-          <Circle size="30px" color="white" bg="green.500">
+          <Circle
+            size="30px"
+            color="white"
+            bg="green.500"
+            _hover={{ bg: "green.600" }}
+          >
             <a href="">
               <FaInstagram />
             </a>
           </Circle>
-          <Circle size="30px" color="white" bg="green.500">
+          <Circle
+            size="30px"
+            color="white"
+            bg="green.500"
+            _hover={{ bg: "green.600" }}
+          >
             <a href="">
               <FaTwitter />
             </a>

@@ -17,5 +17,24 @@ body {
   outline: none !important;
 }
 .container {
-  min-height: 90vh;
+  min-height: 190vh;
+}
+
+.hero {
+  background-image: url(/images/herobg1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.searchInput:focus {
+  height: 3.2rem;
+}
+.badge {
+  font-family: $logotextfm;
+  letter-spacing: 1px;
+}
+.cardImage {
+  transition: ease 0.5s;
+}
+.cardImage:hover {
+  transform: scale(1.03);
 }

@@ -15,23 +15,14 @@ export default function LoginLogoutLinks() {
       fontWeight="bolder"
       display={{ sm: "none", md: "inherit" }}
     >
-      <BreadcrumbItem _active={{ outlineWidth: "0" }}>
-        <BreadcrumbLink
-          as={Link}
-          href="#"
-          _hover={{ textDecoration: "none", color: "gray.500" }}
-        >
+      <BreadcrumbItem _hover={{ textDecoration: "none", color: "gray.500" }}>
+        <BreadcrumbLink as={Link} href="#">
           Log-in
         </BreadcrumbLink>
       </BreadcrumbItem>
 
-      <BreadcrumbItem>
-        <BreadcrumbLink
-          as={Link}
-          href="#"
-          _hover={{ textDecoration: "none", color: "gray.500" }}
-          _active={{ outline: "none" }}
-        >
+      <BreadcrumbItem _hover={{ textDecoration: "none", color: "gray.500" }}>
+        <BreadcrumbLink as={Link} href="#">
           Sign-up
         </BreadcrumbLink>
       </BreadcrumbItem>
