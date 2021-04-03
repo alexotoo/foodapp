@@ -27,12 +27,14 @@ body {
 }
 .searchInput:focus {
   height: 3.2rem;
+  backface-visibility: hidden;
 }
 .badge {
   font-family: $logotextfm;
   letter-spacing: 1px;
 }
 .cardImage {
+  backface-visibility: hidden;
   transition: ease 0.5s;
 }
 .cardImage:hover {
