@@ -6,43 +6,38 @@ import RecipeList from "../components/recipeList/RecipeList";
 import { Spinner } from "@chakra-ui/react";
 import axios from "axios";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home({ recipes }) {
-  const [searchWord, setSearchWord] = useState("");
-  const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [recipesData, setRecipes] = useState(recipes);
-
-  const searchChangeHandler = (e) => {
-    setSearch(e.target.value);
-  };
+  const searchRef = useRef();
 
   const searchSubmitHandler = (e) => {
     e.preventDefault();
-    setSearchWord(search);
     setIsLoading(true);
   };
 
   useEffect(() => {
-    async function getReceipes(searchWord) {
+    async function getReceipes() {
       try {
-        if (search === "") {
+        if (!isLoading) {
           return;
         }
-        const URL = `https://api.edamam.com/search?q=${searchWord}&app_id=${process.env.NEXT_PUBLIC_DATA_ID}&app_key=${process.env.NEXT_PUBLIC_DATA_KEY}&from=0&to=12`;
+        setIsLoading(true);
+        const URL = `https://api.edamam.com/search?q=${searchRef.current.value}&app_id=${process.env.NEXT_PUBLIC_DATA_ID}&app_key=${process.env.NEXT_PUBLIC_DATA_KEY}&from=0&to=12`;
 
         const response = await axios.get(URL);
 
         setRecipes(response.data);
-        setSearch("");
+        searchRef.current.value = "";
         setIsLoading(false);
       } catch (error) {
         console.log(error);
       }
     }
-    getReceipes(searchWord);
-  }, [searchWord]);
+    getReceipes();
+  }, [isLoading]);
 
   return (
     <div className="">
@@ -73,7 +68,7 @@ export default function Home({ recipes }) {
                   />
                   <Input
                     placeholder="Search"
-                    type="search"
+                    type="text"
                     variant="filled"
                     focusBorderColor="transparent"
                     _focus={{ variant: "filled" }}
@@ -81,8 +76,8 @@ export default function Home({ recipes }) {
                     fontSize="1.5rem"
                     className="searchInput"
                     boxShadow="dark-lg"
-                    value={search}
-                    onChange={searchChangeHandler}
+                    isDisabled={isLoading}
+                    ref={searchRef}
                   />
                 </InputGroup>
               </HStack>
