@@ -12,7 +12,17 @@ import {
   Input,
   useDisclosure,
   Center,
+  Link,
+  Text,
 } from "@chakra-ui/react";
+import { Flex, Circle, HStack, Spacer } from "@chakra-ui/layout";
+import {
+  FaSearch,
+  FaHeart,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa";
 
 export default function NavDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -39,17 +49,54 @@ export default function NavDrawer() {
         <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
 
             <DrawerBody>
-              <Input placeholder="Type here..." />
+              <Center>
+                <Text className="logo" textDecoration="none" color="green.500">
+                  Eatify
+                </Text>
+              </Center>
             </DrawerBody>
-
             <DrawerFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme="blue">Save</Button>
+              <HStack
+                display={{ sm: "none", md: "inherit" }}
+                paddingRight="4rem"
+              >
+                <Text color="gray.400" fontWeight="bolder">
+                  Follow
+                </Text>
+                <Circle
+                  size="30px"
+                  color="white"
+                  bg="green.500"
+                  _hover={{ bg: "green.600" }}
+                >
+                  <a href="#">
+                    {" "}
+                    <FaFacebook />
+                  </a>
+                </Circle>
+                <Circle
+                  size="30px"
+                  color="white"
+                  bg="green.500"
+                  _hover={{ bg: "green.600" }}
+                >
+                  <a href="#">
+                    <FaInstagram />
+                  </a>
+                </Circle>
+                <Circle
+                  size="30px"
+                  color="white"
+                  bg="green.500"
+                  _hover={{ bg: "green.600" }}
+                >
+                  <a href="#">
+                    <FaTwitter />
+                  </a>
+                </Circle>
+              </HStack>
             </DrawerFooter>
           </DrawerContent>
         </DrawerOverlay>

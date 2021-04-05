@@ -75,7 +75,7 @@ export default function Navbar() {
             bg="green.500"
             _hover={{ bg: "green.600" }}
           >
-            <a href="">
+            <a href="#">
               <FaInstagram />
             </a>
           </Circle>
@@ -85,7 +85,7 @@ export default function Navbar() {
             bg="green.500"
             _hover={{ bg: "green.600" }}
           >
-            <a href="">
+            <a href="#">
               <FaTwitter />
             </a>
           </Circle>
