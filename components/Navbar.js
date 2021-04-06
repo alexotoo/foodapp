@@ -30,7 +30,7 @@ export default function Navbar() {
         </Center>
         <Center
           color="gray.400"
-          display={{ sm: "none", md: "inherit" }}
+          display={{ base: "none", md: "inherit" }}
           ml="10px"
           _hover={{ color: "gray.500" }}
         >
@@ -51,10 +51,10 @@ export default function Navbar() {
       <Spacer />
 
       <HStack color="gray.400">
-        <Center color="gray.400" display={{ sm: "inherit", md: "none" }}>
+        <Center color="gray.400" display={{ base: "inherit", md: "none" }}>
           <FaHeart size="30px" />
         </Center>
-        <HStack display={{ sm: "none", md: "inherit" }}>
+        <HStack display={{ base: "none", md: "inherit" }}>
           <Text color="gray.400" fontWeight="bolder">
             Follow
           </Text>
@@ -91,7 +91,7 @@ export default function Navbar() {
           </Circle>
         </HStack>
         <Text
-          display={{ sm: "none", md: "inherit" }}
+          display={{ base: "none", md: "inherit" }}
           pl="1rem"
           fontWeight="bolder"
         >

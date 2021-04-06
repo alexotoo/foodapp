@@ -13,7 +13,7 @@ export default function LoginLogoutLinks() {
       fontSize="sm"
       color="gray.400"
       fontWeight="bolder"
-      display={{ sm: "none", md: "inherit" }}
+      display={{ base: "none", md: "inherit" }}
     >
       <BreadcrumbItem _hover={{ textDecoration: "none", color: "gray.500" }}>
         <BreadcrumbLink as={Link} href="#">
