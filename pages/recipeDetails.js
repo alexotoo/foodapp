@@ -19,7 +19,9 @@ export default function recipeDetails() {
   return (
     <Box width="100%" minHeight="90vh" pt="4rem">
       <Center paddingY="1rem">
-        <Text className="logo">{recipeDetails.title}</Text>
+        <Text textAlign="center" paddingX="10px" className="logo">
+          {recipeDetails.title}
+        </Text>
       </Center>
       <VStack paddingX="2rem">
         <Center height="50vh" width="80%">
