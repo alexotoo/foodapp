@@ -58,10 +58,7 @@ export default function NavDrawer() {
               </Center>
             </DrawerBody>
             <DrawerFooter>
-              <HStack
-                display={{ sm: "none", md: "inherit" }}
-                paddingRight="4rem"
-              >
+              <HStack paddingRight="4rem">
                 <Text color="gray.400" fontWeight="bolder">
                   Follow
                 </Text>
