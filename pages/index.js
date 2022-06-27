@@ -43,7 +43,7 @@ export default function Home({ recipes }) {
     <div className="">
       <Head>
         <title>recipe search</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className="container">
@@ -93,7 +93,7 @@ export default function Home({ recipes }) {
   );
 }
 export async function getStaticProps() {
-  const URL = `https://api.edamam.com/search?q=beef&app_id=${process.env.NEXT_PUBLIC_DATA_ID}&app_key=${process.env.NEXT_PUBLIC_DATA_KEY}&from=0&to=12`;
+  const URL = `https://api.edamam.com/search?q=rice&app_id=${process.env.NEXT_PUBLIC_DATA_ID}&app_key=${process.env.NEXT_PUBLIC_DATA_KEY}&from=0&to=12`;
   const res = await fetch(URL);
   const recipes = await res.json();
   return {
