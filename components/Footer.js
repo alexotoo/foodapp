@@ -13,11 +13,9 @@ export default function Footer() {
       textAlign="center"
     >
       <div>
-        <h1 className="logo">Eatify</h1>
-        <p>Developed by AlexooO</p>
-        <a href="https://alexooodev.netlify.app/">
-          visit: alexooodev.netlify.app
-        </a>
+        <img className="logo" src="alexooodevlogo.png" alt="logo" />
+        <p>Developed by Alex Otoo</p>
+        visit:<a href="https://alexooodev.vercel.app/"> my website</a>
         <h5>&#169; {year}</h5>
       </div>
     </Center>
