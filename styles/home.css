@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap");
 
-$logotextfm: "Chango", cursive;
-$bodyfontfm: "Oswald", sans-serif;
+:root {
+  --font-family-logo: "Chango", cursive;
+  --font-family-body: "Oswald", sans-serif;
+}
 
 body {
-  font-family: $bodyfontfm;
+  font-family: var(--font-family-body);
   font-weight: 400;
 }
 .logo {
-  font-family: $logotextfm;
+  font-family: var(--font-family-logo);
   font-size: 2rem;
   letter-spacing: 2px;
 }
@@ -30,7 +32,7 @@ body {
   backface-visibility: hidden;
 }
 .badge {
-  font-family: $logotextfm;
+  font-family: var(--font-family-logo);
   letter-spacing: 1px;
 }
 .cardImage {
