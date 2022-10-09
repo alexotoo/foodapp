@@ -27,6 +27,11 @@ export default function Home({ recipes }) {
         setIsLoading(true);
         const URL = `https://api.edamam.com/search?q=${searchRef.current.value}&app_id=${process.env.NEXT_PUBLIC_DATA_ID}&app_key=${process.env.NEXT_PUBLIC_DATA_KEY}&from=0&to=12`;
 
+        if (searchRef.current.value === "") {
+          setIsLoading(false);
+          return;
+        }
+
         const response = await axios.get(URL);
 
         setRecipes(response.data);
