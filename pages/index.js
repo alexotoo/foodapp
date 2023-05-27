@@ -98,7 +98,7 @@ export default function Home({ recipes }) {
   );
 }
 export async function getStaticProps() {
-  const URL = `https://api.edamam.com/search?q=rice&app_id=${process.env.NEXT_PUBLIC_DATA_ID}&app_key=${process.env.NEXT_PUBLIC_DATA_KEY}&from=0&to=12`;
+  const URL = `https://api.edamam.com/search?q=rice&app_id=${process.env.NEXT_PUBLIC_DATA_ID}&app_key=${process.env.NEXT_PUBLIC_DATA_KEY}&from=0&to=18`;
   const res = await fetch(URL);
   const recipes = await res.json();
   return {
